@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caleb's Birth Stats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fefefe;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            display: inline-block;
+            padding: 30px;
+            border-radius: 20px;
+            background: #f4f9ff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .emoji {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>👶 Caleb's Birth Stats</h1>
+        <p class="emoji">🗓️ <strong>Born on:</strong> March 16, 2025</p>
+        <p class="emoji">📅 <strong>Day of the week:</strong> Sunday</p>
+        <p class="emoji">🎂 <strong>Caleb is</strong> <span id="days-old"></span> <strong>days old today!</strong></p>
+    </div>
+
+    <script>
+        // Calculate days old dynamically
+        const birthDate = new Date('2025-03-16');
+        const today = new Date();
+        const diffTime = today - birthDate;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        document.getElementById("days-old").innerText = diffDays.toLocaleString();
+    </script>
+</body>
+</html>
